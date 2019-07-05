@@ -1,13 +1,13 @@
 {
-    "name": "brotzka/laravel-dotenv-editor",
+    "name": "hepplerdotnet/laravel-dotenv-editor",
     "description": "A package for editing the .env file in your Laravel root.",
     "keywords": ["laravel", "dotenv", "dotenv-editor"],
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Fabian Hagen",
-            "email": "fabianhagen87@gmail.com"
+            "name": "Patrick Heppler",
+            "email": "patrick@heppler.net"
         }
     ],
     "minimum-stability": "stable",
@@ -16,16 +16,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Brotzka\\DotenvEditor\\": "src/"
+            "HepplerDotNet\\DotenvEditor\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Brotzka\\DotenvEditor\\DotenvEditorServiceProvider"
+                "HepplerDotNet\\DotenvEditor\\DotenvEditorServiceProvider"
             ],
             "aliases": {
-                "DotenvEditor": "Brotzka\\DotenvEditor\\DotenvEditorFacade"
+                "DotenvEditor": "HepplerDotNet\\DotenvEditor\\DotenvEditorFacade"
             }
         }
     }

@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Fabian
- * Date: 19.07.16
- * Time: 06:17
- */
 
-namespace Brotzka\DotenvEditor\Http\Controllers;
+namespace HepplerDotNet\DotenvEditor\Http\Controllers;
 
-use Brotzka\DotenvEditor\DotenvEditor as Env;
-use Brotzka\DotenvEditor\Exceptions\DotEnvException;
+use HepplerDotNet\DotenvEditor\DotenvEditor as Env;
+use HepplerDotNet\DotenvEditor\Exceptions\DotEnvException;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 

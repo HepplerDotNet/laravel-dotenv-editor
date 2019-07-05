@@ -4,9 +4,10 @@
  * Created by PhpStorm.
  * User: Fabian
  * Date: 28.07.16
- * Time: 06:08
+ * Time: 06:08.
  */
-namespace Brotzka\DotenvEditor\Exceptions;
+
+namespace HepplerDotNet\DotenvEditor\Exceptions;
 
 use Exception;
 
@@ -19,6 +20,6 @@ class DotEnvException extends Exception
 
     public function __toString()
     {
-        return __CLASS__ . ":[{$this->code}]: {$this->message}\n";
+        return __CLASS__.":[{$this->code}]: {$this->message}\n";
     }
 }

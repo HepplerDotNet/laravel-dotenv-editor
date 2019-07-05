@@ -1,57 +1,47 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Fabian
- * Date: 12.05.16
- * Time: 07:22
- */
 
-namespace Brotzka\DotenvEditor;
+namespace HepplerDotNet\DotenvEditor;
 
 use Illuminate\Support\ServiceProvider;
 
 class DotenvEditorServiceProvider extends ServiceProvider
 {
     /**
-     * Provider boot
-     *
-     * @return null
+     * Provider boot.
      */
     public function boot()
     {
         $this->publishes(
             [
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/dotenv-editor'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/dotenv-editor'),
             ],
             'views'
         );
 
         $this->publishes(
             [
-                __DIR__ . '/../config/dotenveditor.php' => config_path('dotenveditor.php'),
+                __DIR__.'/../config/dotenveditor.php' => config_path('dotenveditor.php'),
             ],
             'config'
         );
 
-        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dotenv-editor');
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'dotenv-editor');
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'dotenv-editor');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'dotenv-editor');
     }
 
     /**
-     * Provider register
-     *
-     * @return null
+     * Provider register.
      */
     public function register()
     {
         $this->app->bind(
-            'brotzka-dotenveditor',
+            'dotenveditor',
             function () {
                 return new DotenvEditor();
             }
         );
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/dotenveditor.php', 'dotenveditor');
+        $this->mergeConfigFrom(__DIR__.'/../config/dotenveditor.php', 'dotenveditor');
     }
 }
