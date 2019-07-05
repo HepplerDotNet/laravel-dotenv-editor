@@ -529,7 +529,7 @@ class DotenvEditor
             $newArray = [];
             $c = 0;
             foreach ($array as $key => $value) {
-                if (preg_match('/\s/', $value) > 0 && (!strpos($value, '"') && !strpos($value, '"', -0))) {
+                if (preg_match('/\s/', $value) > 0 && (false === strpos($value, '"') && false === strpos($value, '"', -0))) {
                     $value = '"'.$value.'"';
                 }
 
