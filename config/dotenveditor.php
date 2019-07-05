@@ -37,6 +37,6 @@ return [
         'namespace' => 'HepplerDotNet\DotenvEditor\Http\Controllers',
         'prefix' => 'admin/env',
         'as' => 'admin.env.',
-        'middleware' => ['web', 'admin'],
+        'middleware' => ['web'],
     ],
 ];

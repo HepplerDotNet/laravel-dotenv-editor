@@ -188,10 +188,10 @@ All needed files are included within this file, so nothing could break if you ex
                           <div class="card-body">
                           <h5 class="card-title">{!! trans('dotenv-editor::views.backup_title_one') !!}</h5>
                           <div class="">
-                                <a href="{{ url(config('dotenveditor.route') . "/createbackup") }}" class="btn btn-primary">
+                                <a href="{{ url(config('dotenveditor.route.prefix') . "/createbackup") }}" class="btn btn-primary">
                                     {!! trans('dotenv-editor::views.backup_create') !!}
                                 </a>
-                                <a href="{{ url(config("dotenveditor.route") . "/download") }}" class="btn btn-primary">
+                                <a href="{{ url(config("dotenveditor.route.prefix") . "/download") }}" class="btn btn-primary">
                                     {!! trans('dotenv-editor::views.backup_download') !!}
                                 </a>
                             </div>
@@ -237,10 +237,10 @@ All needed files are included within this file, so nothing could break if you ex
                                                             title="{!! trans('dotenv-editor::views.backup_table_options_restore') !!}">
                                                         <span class="fa  fa-refresh" title="{!! trans('dotenv-editor::views.backup_table_options_restore') !!}"></span>
                                                     </button>
-                                                    <a class="btn btn-info" href="{{ url(config("dotenveditor.route") . "/download/" . $backup['unformatted']) }}">
+                                                    <a class="btn btn-info" href="{{ url(config("dotenveditor.route.prefix") . "/download/" . $backup['unformatted']) }}">
                                                         <span class="fa fa-download" title="{!! trans('dotenv-editor::views.backup_table_options_download') !!}"></span>
                                                     </a>
-                                                    <a class="btn btn-danger" href="{{ url(config("dotenveditor.route") . "/deletebackup/" . $backup["unformatted"]) }}"
+                                                    <a class="btn btn-danger" href="{{ url(config("dotenveditor.route.prefix") . "/deletebackup/" . $backup["unformatted"]) }}"
                                                        title="{!! trans('dotenv-editor::views.backup_table_options_delete') !!}">
                                                         <span class="fa fa-trash"></span>
                                                     </a>
@@ -286,7 +286,7 @@ All needed files are included within this file, so nothing could break if you ex
 
                                         <button type="button" class="btn btn-default" data-dismiss="modal">{!! trans('dotenv-editor::views.backup_modal_close') !!}</button>
 
-                                        <a href="{{ url(config("dotenveditor.route") . "/deletebackup/" . $backup["unformatted"]) }}" class="btn btn-danger">
+                                        <a href="{{ url(config("dotenveditor.route.prefix") . "/deletebackup/" . $backup["unformatted"]) }}" class="btn btn-danger">
                                             {!! trans('dotenv-editor::views.backup_modal_delete') !!}
                                         </a>
                                     </div>
@@ -305,7 +305,7 @@ All needed files are included within this file, so nothing could break if you ex
                                     {!! trans('dotenv-editor::views.upload_text') !!}
                                     <span class="text text-warning"> {!! trans('dotenv-editor::views.upload_warning') !!} </span>
                                 </div>
-                                <form method="post" action="{{ url(config("dotenveditor.route") . "/upload") }}" enctype="multipart/form-data">
+                                <form method="post" action="{{ url(config("dotenveditor.route.prefix") . "/upload") }}" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="backup">{!! trans('dotenv-editor::views.upload_label') !!}</label>
                                         <input class="btn btn-secondary" type="file" name="backup">
