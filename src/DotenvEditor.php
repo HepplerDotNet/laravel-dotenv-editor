@@ -19,6 +19,7 @@ class DotenvEditor
     private $env;
     private $backupPath;
     private $autoBackup = false;
+    private $sortOnSave;
 
     /**
      * DotenvEditor constructor.
@@ -28,6 +29,7 @@ class DotenvEditor
         $backupPath = Str::finish(config('dotenveditor.backupPath'), '/');
         $env = config('dotenveditor.pathToEnv');
         $filePermissions = config('dotenveditor.filePermissions');
+        $sortOnSave = config('dotenveditor.sortOnSave');
 
         if (!file_exists($env)) {
             return false;
@@ -39,6 +41,7 @@ class DotenvEditor
             mkdir($backupPath, $filePermissions, true);
         }
         $this->backupPath = $backupPath;
+        $this->sortOnSave = $sortOnSave;
     }
 
     /*
@@ -538,6 +541,10 @@ class DotenvEditor
             }
 
             $newArray = implode("\n", $newArray);
+
+            if (true === $this->sortOnSave) {
+                ksort($newArray);
+            }
 
             file_put_contents($this->env, $newArray);
 

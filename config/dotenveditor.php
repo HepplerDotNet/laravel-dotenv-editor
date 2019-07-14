@@ -12,6 +12,7 @@ return [
     'pathToEnv' => base_path('.env'),
     'backupPath' => resource_path('backups/dotenv-editor/'),
     'filePermissions' => env('FILE_PERMISSIONS', 0755),
+    'sortOnSave' => true,
 
     /*
     |--------------------------------------------------------------------------
