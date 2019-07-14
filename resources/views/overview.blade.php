@@ -118,7 +118,7 @@ All needed files are included within this file, so nothing could break if you ex
                                         </p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
                                             {!! trans('dotenv-editor::views.overview_delete_modal_no') !!}
                                         </button>
                                         <button type="button" class="btn btn-danger" @click="deleteEntry">
@@ -145,7 +145,7 @@ All needed files are included within this file, so nothing could break if you ex
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
                                             {!! trans('dotenv-editor::views.overview_edit_modal_quit') !!}
                                         </button>
                                         <button type="button" class="btn btn-primary" @click="updateEntry">
@@ -174,7 +174,7 @@ All needed files are included within this file, so nothing could break if you ex
                                         <label for="newvalue">{!! trans('dotenv-editor::views.addnew_label_value') !!}</label>
                                         <input type="text" name="newvalue" id="newvalue" v-model="newEntry.value" class="form-control">
                                     </div>
-                                    <button class="btn btn-default" type="submit">
+                                    <button class="btn btn-primary" type="submit">
                                         {!! trans('dotenv-editor::views.addnew_button_add') !!}
                                     </button>
                                 </form>
@@ -284,7 +284,7 @@ All needed files are included within this file, so nothing could break if you ex
                                         {!! trans('dotenv-editor::views.backup_modal_restore') !!}
                                         </a>
 
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">{!! trans('dotenv-editor::views.backup_modal_close') !!}</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">{!! trans('dotenv-editor::views.backup_modal_close') !!}</button>
 
                                         <a href="{{ url(config("dotenveditor.route.prefix") . "/deletebackup/" . $backup["unformatted"]) }}" class="btn btn-danger">
                                             {!! trans('dotenv-editor::views.backup_modal_delete') !!}
