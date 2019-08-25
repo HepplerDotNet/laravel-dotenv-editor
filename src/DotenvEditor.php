@@ -540,11 +540,10 @@ class DotenvEditor
                 ++$c;
             }
 
-            $newArray = implode("\n", $newArray);
-
             if (true === $this->sortOnSave) {
                 ksort($newArray);
             }
+            $newArray = implode("\n", $newArray);
 
             file_put_contents($this->env, $newArray);
 
