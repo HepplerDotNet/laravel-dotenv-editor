@@ -390,7 +390,7 @@ class DotenvEditor
      */
     public function isStartOrEndWith($value, $string = '')
     {
-        return starts_with($value, $string) || ends_with($value, $string);
+        return Str::startsWith($value, $string) || Str::endsWith($value, $string);
     }
 
     /**
